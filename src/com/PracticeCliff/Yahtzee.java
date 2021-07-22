@@ -12,7 +12,12 @@ public class Yahtzee {
         player = new Player((scanner.nextLine()).trim());
     }
 
-    public void play() { turn(); }
+    public void play() {
+        for (int i = 0; i < 5; i++) {
+            turn();
+        }
+        System.out.println(player.updateScore());
+    }
 
     public void getSelections() {
         System.out.println("select dice you want to re-roll (1 -5");
@@ -23,13 +28,13 @@ public class Yahtzee {
     public void turn() {
         player.cup.roll();
 
-
         for(int i = 0; i < 2; i++) {
             System.out.println(player.cup.displayCup());
             getSelections();
         }
 
         System.out.println(player.cup.displayCup());
+        System.out.println(player.updateScore());
     }
 
 
