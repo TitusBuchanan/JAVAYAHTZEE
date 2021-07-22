@@ -3,13 +3,12 @@ package com.PracticeCliff;
 import java.util.Scanner;
 
 public class Yahtzee {
-    public Cup myCup = new Cup();
+    //public Cup myCup = new Cup();
     public Player player;
     private Scanner scanner = new Scanner(System.in);
 
     public Yahtzee() {
         System.out.println("What is your name?");
-
         player = new Player((scanner.nextLine()).trim());
     }
 
@@ -17,7 +16,7 @@ public class Yahtzee {
 
     public void getSelections() {
         System.out.println("select dice you want to re-roll (1 -5");
-        String input = scanner.nextLine();
+        String input = scanner.nextLine(); // "1 2 5"
         player.cup.roll(player.cup.parseSelections(input));
     }
 

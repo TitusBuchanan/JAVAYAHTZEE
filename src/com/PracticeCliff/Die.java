@@ -8,6 +8,7 @@ public class Die {
         numberOfSides = 6;
     }
 
+    //Example of overloading
     public Die(int numberOfSides) {
         this.numberOfSides = numberOfSides;
     }
