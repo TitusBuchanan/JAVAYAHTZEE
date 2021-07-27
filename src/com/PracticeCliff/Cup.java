@@ -45,7 +45,7 @@ public class Cup {
         for (String number: inputArr) {
             selections.add(Integer.parseInt(number) - 1);
         }
-        return selections;
+        return selections.contains(-1) ? new ArrayList<Integer>() : selections;
     }
 
 
