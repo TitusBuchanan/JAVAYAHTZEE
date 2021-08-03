@@ -64,7 +64,7 @@ public class Yahtzee {
     }
 
     public void getSelections(Player activePlayer) {
-        System.out.println("select dice you want to re-roll (1 -5");
+        System.out.println("Select dice you want to re-roll (1 -5");
         String input = scanner.nextLine(); // "1 2 5"
         if(input.equals("")) return;
         activePlayer.cup.roll(player.cup.parseSelections(input));
